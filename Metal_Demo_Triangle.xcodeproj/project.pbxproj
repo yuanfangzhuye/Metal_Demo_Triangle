@@ -14,6 +14,10 @@
 		F251604624F3955F00B27781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F251604524F3955F00B27781 /* Assets.xcassets */; };
 		F251604924F3955F00B27781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F251604724F3955F00B27781 /* LaunchScreen.storyboard */; };
 		F251604C24F3955F00B27781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F251604B24F3955F00B27781 /* main.m */; };
+		F251605424F395B200B27781 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F251605324F395B200B27781 /* Metal.framework */; };
+		F251605624F395BD00B27781 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F251605524F395BD00B27781 /* MetalKit.framework */; };
+		F251605A24F3960000B27781 /* LcRender.m in Sources */ = {isa = PBXBuildFile; fileRef = F251605924F3960000B27781 /* LcRender.m */; };
+		F251605C24F3963800B27781 /* LcShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = F251605B24F3963800B27781 /* LcShaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,12 @@
 		F251604824F3955F00B27781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F251604A24F3955F00B27781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F251604B24F3955F00B27781 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F251605324F395B200B27781 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		F251605524F395BD00B27781 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		F251605824F3960000B27781 /* LcRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LcRender.h; sourceTree = "<group>"; };
+		F251605924F3960000B27781 /* LcRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LcRender.m; sourceTree = "<group>"; };
+		F251605B24F3963800B27781 /* LcShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LcShaders.metal; sourceTree = "<group>"; };
+		F251605D24F3965900B27781 /* LcShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LcShaderTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F251605624F395BD00B27781 /* MetalKit.framework in Frameworks */,
+				F251605424F395B200B27781 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +59,7 @@
 			children = (
 				F251603824F3955D00B27781 /* Metal_Demo_Triangle */,
 				F251603724F3955D00B27781 /* Products */,
+				F251605224F395B200B27781 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +80,7 @@
 				F251603D24F3955D00B27781 /* SceneDelegate.m */,
 				F251603F24F3955D00B27781 /* ViewController.h */,
 				F251604024F3955D00B27781 /* ViewController.m */,
+				F251605724F395EC00B27781 /* Render */,
 				F251604224F3955D00B27781 /* Main.storyboard */,
 				F251604524F3955F00B27781 /* Assets.xcassets */,
 				F251604724F3955F00B27781 /* LaunchScreen.storyboard */,
@@ -74,6 +88,26 @@
 				F251604B24F3955F00B27781 /* main.m */,
 			);
 			path = Metal_Demo_Triangle;
+			sourceTree = "<group>";
+		};
+		F251605224F395B200B27781 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F251605524F395BD00B27781 /* MetalKit.framework */,
+				F251605324F395B200B27781 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F251605724F395EC00B27781 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				F251605824F3960000B27781 /* LcRender.h */,
+				F251605924F3960000B27781 /* LcRender.m */,
+				F251605B24F3963800B27781 /* LcShaders.metal */,
+				F251605D24F3965900B27781 /* LcShaderTypes.h */,
+			);
+			path = Render;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +184,8 @@
 				F251603B24F3955D00B27781 /* AppDelegate.m in Sources */,
 				F251604C24F3955F00B27781 /* main.m in Sources */,
 				F251603E24F3955D00B27781 /* SceneDelegate.m in Sources */,
+				F251605A24F3960000B27781 /* LcRender.m in Sources */,
+				F251605C24F3963800B27781 /* LcShaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,13 +327,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Metal_Demo_Triangle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.yuanfangzhuye.Metal-Demo-Triangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,13 +344,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Metal_Demo_Triangle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.yuanfangzhuye.Metal-Demo-Triangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
